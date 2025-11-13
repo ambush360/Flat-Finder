@@ -1,10 +1,15 @@
+import React from 'react'
+import { Route, Routes } from 'react-router'
+import Layout from './pages/Layout'
 
-function App() {
-
-
+const App = () => {
   return (
     <div>
-      Hello World
+      <Routes>
+        <Route  element={<Layout />} >
+          <Route index element={<Home />} />
+        </Route>
+      </Routes>
     </div>
   )
 }
